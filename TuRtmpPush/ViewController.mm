@@ -6,6 +6,8 @@
 //
 
 #import "ViewController.h"
+#include "socketconnect.hpp"
+#include "handshake.hpp"
 
 @interface ViewController ()
 

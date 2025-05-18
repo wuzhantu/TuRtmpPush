@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A3603EFC-C4D8-47E9-AFC3-969694C29766"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B391D48-BC67-4E53-9CB5-A001CE256C22"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TuRtmpPush/tu-rtmp/socketconnect.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "socketconnect::connectServer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23201722-7EA0-4FB5-BC90-CD1546ECA80D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TuRtmpPush/tu-rtmp/handshake.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "handshake::threehandshake()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "23201722-7EA0-4FB5-BC90-CD1546ECA80D - 295a0894ddfebba7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "handshake::threehandshake()"
+                  moduleName = "TuRtmpPush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhantuwu/Desktop/%E6%AF%8F%E6%97%A5%E5%9D%9A%E6%8C%81/%E9%9F%B3%E8%A7%86%E9%A2%91/TuRtmpPush/TuRtmpPush/tu-rtmp/handshake.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  uuid = "23201722-7EA0-4FB5-BC90-CD1546ECA80D - 295a0894ddfebba7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "handshake::threehandshake()"
+                  moduleName = "TuRtmpPush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhantuwu/Desktop/%E6%AF%8F%E6%97%A5%E5%9D%9A%E6%8C%81/%E9%9F%B3%E8%A7%86%E9%A2%91/TuRtmpPush/TuRtmpPush/tu-rtmp/handshake.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "548">
+               </Location>
+               <Location
+                  uuid = "23201722-7EA0-4FB5-BC90-CD1546ECA80D - 295a0894ddfebba7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "handshake::threehandshake()"
+                  moduleName = "TuRtmpPush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhantuwu/Desktop/%E6%AF%8F%E6%97%A5%E5%9D%9A%E6%8C%81/%E9%9F%B3%E8%A7%86%E9%A2%91/TuRtmpPush/TuRtmpPush/tu-rtmp/handshake.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "536">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED9A7462-E8D5-471B-A3BA-C0EC9AE0F167"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TuRtmpPush/tu-rtmp/handshake.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "handshake::threehandshake()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ED9A7462-E8D5-471B-A3BA-C0EC9AE0F167 - 295a0894ddfebe19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "handshake::threehandshake()"
+                  moduleName = "TuRtmpPush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhantuwu/Desktop/%E6%AF%8F%E6%97%A5%E5%9D%9A%E6%8C%81/%E9%9F%B3%E8%A7%86%E9%A2%91/TuRtmpPush/TuRtmpPush/tu-rtmp/handshake.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "684">
+               </Location>
+               <Location
+                  uuid = "ED9A7462-E8D5-471B-A3BA-C0EC9AE0F167 - 295a0894ddfebe19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "handshake::threehandshake()"
+                  moduleName = "TuRtmpPush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhantuwu/Desktop/%E6%AF%8F%E6%97%A5%E5%9D%9A%E6%8C%81/%E9%9F%B3%E8%A7%86%E9%A2%91/TuRtmpPush/TuRtmpPush/tu-rtmp/handshake.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "672">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

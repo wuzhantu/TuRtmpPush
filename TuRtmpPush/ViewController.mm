@@ -17,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+//    nginx
+//    http://localhost:8080/
+    
+    socketconnect sc;
+    sc.connectServer();
+    handshake hs(sc.socketVal);
+    hs.threehandshake();
 }
 
 

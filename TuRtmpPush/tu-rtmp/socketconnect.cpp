@@ -18,7 +18,7 @@ void socketconnect::connectServer() {
     hints.ai_flags = AI_DEFAULT;
     
     unsigned short port = 1935;
-    const char *hostname = "192.168.0.101";
+    const char *hostname = "127.0.0.1"; //127.0.0.1 192.168.0.101
 
     char portstr[10];
     snprintf(portstr, sizeof(portstr), "%d", port);

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430ADCBD2DEDF27D005AD2EC /* AMFEncode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 430ADCBB2DEDF27D005AD2EC /* AMFEncode.cpp */; };
 		43E7B5412DDA287D00283791 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E7B5402DDA287D00283791 /* AppDelegate.m */; };
 		43E7B5442DDA287D00283791 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E7B5432DDA287D00283791 /* SceneDelegate.m */; };
 		43E7B5472DDA287D00283791 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43E7B5462DDA287D00283791 /* ViewController.mm */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		430ADCBB2DEDF27D005AD2EC /* AMFEncode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AMFEncode.cpp; sourceTree = "<group>"; };
+		430ADCBC2DEDF27D005AD2EC /* AMFEncode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AMFEncode.hpp; sourceTree = "<group>"; };
 		43E7B53C2DDA287D00283791 /* TuRtmpPush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuRtmpPush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E7B53F2DDA287D00283791 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		43E7B5402DDA287D00283791 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				43E7B5792DDA29FE00283791 /* socketconnect.hpp */,
 				43E7B5752DDA29C100283791 /* handshake.cpp */,
 				43E7B5762DDA29C100283791 /* handshake.hpp */,
+				430ADCBB2DEDF27D005AD2EC /* AMFEncode.cpp */,
+				430ADCBC2DEDF27D005AD2EC /* AMFEncode.hpp */,
 			);
 			path = "tu-rtmp";
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				43E7B5522DDA287E00283791 /* main.m in Sources */,
 				43E7B57A2DDA29FE00283791 /* socketconnect.cpp in Sources */,
 				43E7B5442DDA287D00283791 /* SceneDelegate.m in Sources */,
+				430ADCBD2DEDF27D005AD2EC /* AMFEncode.cpp in Sources */,
 				43E7B5772DDA29C100283791 /* handshake.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,6 +26,7 @@ public:
     char *encodeBoolean(char *output);
     char *encodeNumber(char *output);
     void sendPacket();
+    void writeN(const char *buffer, int n);
 };
 
 #endif /* AMFEncode_hpp */

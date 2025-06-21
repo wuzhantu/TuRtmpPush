@@ -97,6 +97,11 @@ void AMFEncode::sendPacket() {
     int m_headerType = 1; // m_headerType就是fmt的意思，fmt类型决定Message header的长度
     int nSize = packetSize[m_headerType]; // Message header + fmt
     int hSize = nSize; //hSize是整个Chunk header的长度
+    char *m_body;
+    char *header;
+    if (m_body) {
+        header = m_body - nSize;
+    }
     
     int cSize = 0; // cSize是cs id的长度，cs id <= 63不需要额外字节，fmt那个字节剩余的六位正好能放下
     int m_nChannel = 500;
@@ -112,6 +117,7 @@ void AMFEncode::sendPacket() {
     
     if (cSize > 0) {
         hSize += cSize; // 再加上cs id的长度
+        header -= cSize;
     }
     
     // 判断是否需要Extended Timestamp
@@ -119,6 +125,7 @@ void AMFEncode::sendPacket() {
     // t > 0xffffff是说只有时间戳大于0xffffff导致存不下才需要Extended Timestamp
     if (nSize > 1 && t >= 0xffffff) {
         hSize += 4; //Extended Timestamp是四个字节
+        header -= 4;
     }
     
     char c = m_headerType << 6; //c是存储fmt的字节，最高两位存储fmt，剩余六位的值需要根据cs id大小做对应处理
@@ -138,7 +145,7 @@ void AMFEncode::sendPacket() {
             break;
     }
     
-    char *hptr;
+    char *hptr = header;
     *hptr++ = c; // 把fmt存起来
     if (cSize) {
         int tmp = m_nChannel - 64; // 为什么要-64？因为这样可以让存储cs id的字节尽量存下更大的数
@@ -174,4 +181,43 @@ void AMFEncode::sendPacket() {
     if (nSize > 1 && t >= 0xffffff) {
         hptr = encodeInt32(hptr, t);
     }
+    
+    int m_nBodySize = 100;
+    int bodySize = m_nBodySize;
+    char *buffer = m_body;
+    int nChunkSize = 20;
+    
+    // 只有第一个分块发送了Message Header和（或）Extended Timestamp
+    while (bodySize + hSize) {
+        if (bodySize < nChunkSize) {
+            nChunkSize = bodySize;
+        }
+        
+        writeN(header, hSize + nChunkSize);
+        bodySize -= nChunkSize; // 发送一次，总数就减少
+        buffer += nChunkSize; // 发送一次，指针就往后挪
+        hSize = 0; // 发送一次，重新计算Chunk header的长度
+        
+        // 准备下一次发送的Chunk header，后续的分块只发送Basic Header，没有Message Header和Extended Timestamp
+        if (bodySize > 0) {
+            header = buffer - 1; //先退一个字节
+            hSize = 1;
+            if (cSize) {
+                hSize += cSize;
+                header -= cSize; // 根据cs id再退cSize个字节
+            }
+            *header = (0xc0 | c);
+            if (cSize) {
+                int tmp = m_nChannel - 64;
+                header[1] = tmp & 0xff;
+                if (cSize == 2) {
+                    header[2] = tmp >> 8;
+                }
+            }
+        }
+    }
+}
+
+void AMFEncode::writeN(const char *buffer, int n) {
+    
 }

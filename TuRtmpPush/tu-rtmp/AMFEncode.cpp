@@ -100,7 +100,7 @@ void AMFEncode::sendPacket() {
     char *m_body;
     char *header;
     if (m_body) {
-        header = m_body - nSize;
+        header = m_body - nSize; // 这样保险吗？万一m_body - nSize这个位置的内存还没被分配呢？
     }
     
     int cSize = 0; // cSize是cs id的长度，cs id <= 63不需要额外字节，fmt那个字节剩余的六位正好能放下
@@ -206,7 +206,7 @@ void AMFEncode::sendPacket() {
                 hSize += cSize;
                 header -= cSize; // 根据cs id再退cSize个字节
             }
-            *header = (0xc0 | c);
+            *header = (0xc0 | c); // c就是前面计算好的fmt所在字节的值，为什么还要和0xc0（11000000）做与操作？因为这样可以设置fmt=3，而fmt=3是没有Message Header和Extended Timestamp的
             if (cSize) {
                 int tmp = m_nChannel - 64;
                 header[1] = tmp & 0xff;
